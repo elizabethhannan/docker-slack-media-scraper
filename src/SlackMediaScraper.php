@@ -125,7 +125,7 @@ class SlackMediaScraper {
         $this->hasMoreMessages = false;
         $requestOptions = [
             'channel' => $this->slackChannelId,
-            'count' => 100,
+            'count' => 1000,
             'oldest' => $this->nextFromTime,
         ];
         $result = $this->slackClient->channels->history($requestOptions);
